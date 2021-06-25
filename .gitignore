@@ -1,0 +1,7 @@
+# 忽略指定文件夹
+.spyproject/
+__pycache__
+
+# 忽略指定文件
+#.gitattributes
+#.gitignore

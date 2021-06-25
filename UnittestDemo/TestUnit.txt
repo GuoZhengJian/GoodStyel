@@ -1,0 +1,61 @@
+
+Unit模块文档测试----------------------------------------------------------------
+首先要导入模块
+>>> from Unit import Demo
+
+>>> Demo('Hello Word').back_str()
+'Hello Word'
+
+>>> Demo(5).back_nums()
+5
+
+>>> Demo(5).back_list()
+[0, 1, 2, 3, 4]
+
+>>> Demo(20).back_list()
+Traceback (innermost last):
+    ...
+ValueError: number must be > 10
+
+
+unittest的基本使用包括定义一个继承自unittest. TestCase的类。在这个类中，各种测试由
+以名称test开头的方法定义，例如testsimplestring、testtypeconvert等。（需要强调的是，可以
+随意命名，只要它以cest开头即可）。在每个测试内，使用各种断言来检查不同条件。
+例如，在编写程序和控制测试过程时，使用unittest. TestCase的实例t的以下方法：
+c.eetup ()
+在运行任何测试方法之前，调用它来执行设置步骤。
+c.tearDown ()
+在运行测试之后，调用它来执行清除操作。
+t.aeeert_ (expr【，mag] )
+t.fail0nleaa (expr 【，mag1)
+如果expr的计算结果为False,表明测试失败。msg是一条消息字符串，提供对失败（如果有的
+话）的解释。
+c.aesertBqual (x,y【，magl)
+t.fail0nleeegqual (x,yt,mag1)
+如果x和y不相等，则表明测试失败。msg是一条解释失败（如果有的话）的消息。
+t.aesertNotBqual (x,y t,magl)
+e.failIfBqual (x,y, 【，mag】）
+如果x和y相等，则表明测试失败。msg是一条解释失败（如果有的话）的消息。
+c.aaaortAleoatEqual (x,y【，placea 【，mag11)
+t.fai10nlesaA1mostzqual (x,y, L,placea [,meg]1)
+如果数字x和y未包含在对方的places小数位数中，则表明测试失败。检查方法是计算x和y的差并
+将结果舍入到给定位数。如果结果为0,则x和y的值相近。msg是一条解释失败（如果有的话）的消息。
+t.aesertNotAlmostBqual (x,y,t,placea 【，mag] 1)
+t.fai1IfAlmoatBqual (x,y【，placea 【，meg11)
+如果x和y在places小数位数内无法区分大小，则表明测试失败。msg是一条解释失败（如果有的
+话）的消息。
+t.assertRaieon (exc,callable, . . . )
+t.fai1UnleaaRaieea (exo,callable, . . . )
+如果可调用对象callable未引发异常exc,则表明测试失败。剩余参数将以参数形式传递给
+callable.可以使用异常元组exc检查多个异常。
+t.failIf (expr【，mag] )
+如果expr计算结果为True,则表明测试失败。msg是一条解释失败（如果有的话）的消息。
+t.fail (【mag】）
+表明测试失败。msg是一条解释失败（如果有的话）的消息。
+t.failureBxception
+该属性设置为在测试中捕获到的最后一个异常值。如果不仅要检查是否出现异常，还想检查异常
+是否抛出了恰当的值（例如，如果想检查引发的异常中生成的错误消息），该属性可能很有用。
+应该注意，unittest模块中包含大量高级自定义选项，主要针对测试进行分组、创建测试套件和
+控制测试的运行环境。这些功能与为代码编写测试的过程没有直接关系（编写测试类的过程往往与实
+际执行测试的方法彼此独立）。关于如何组织大型程序的测试的更多信息，请查阅http://docs.python.org/
+library/unittest.html上的文档。
