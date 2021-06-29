@@ -1,9 +1,12 @@
 """
 避免使用(.)运算符 (使用from math import sqrt和sqtr(x) 比 import math和math.sqrt(x) 要快)
 不过不应该在所有位置都消除属性查找, 因为这会使代码非常难以理解。但对于注重性能的部分，这是一种有用的技术；
-如下述： from doctest import testmod和testmod() 性能更好， 但是 import doctest和doctest.testmod() 更容易理解。
+如下述： 
+    from doctest import testmod和testmod() 性能更好, 但是在代码很多的情况下不容易理解, 且涉及命名空间问题， 
+    import doctest和doctest.testmod() 更容易理解, 但是在涉及大量调用属性的情况下会很慢。
 """
 from doctest import testmod
+
     
 class CodeStyel:
     """
