@@ -50,7 +50,8 @@ class CodeStyel:
             return [i for i in range(int(self.__x * self.__y / num))]
         except TypeError:
             raise TypeError('类型错误')
-     
+        
+    #
     @property
     @staticmethod
     @classmethod
