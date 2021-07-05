@@ -38,8 +38,11 @@ class CodeStyel:
         self.__y = numy
         # self.__z = numz    # AttributeError: 'DocStyel' object has no attribute 'z'
         
+    @装饰器函数
     def func1(self, num):
         """
+        多用装饰器来处理对象的参数, 把参数处理和目标函数功能分开写, 便于维护
+        
         使用内置类型来操作和存储数据 (元组,列表,集合,字典完全是由C实现的, 且是最优的数据结构)
         内置函数有的功能, 不要造轮子。
         不要添加层 (尽量使用文档介绍的方法使用对象或函数, 如{A:20} 要比 dict(A=20)快很多)
